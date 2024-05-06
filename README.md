@@ -1,2 +1,2 @@
 my website 
-juqwtf.is-a.dev
+https://juqwtf.is-a.dev
