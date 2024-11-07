@@ -1,0 +1,115 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: rgb(22, 22, 22);
+	color: white;
+	overflow: hidden auto;
+	font-family: "Satoshi", sans-serif;
+    user-drag: none;
+
+	-webkit-user-select: none; /* Disable text selection */
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	-webkit-touch-callout: none; /* Disable right-click */
+	-webkit-user-drag: none; /* Disable dragging */
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	
+}
+
+img, .container .avatar, .container .banner {
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
+}
+
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(0px);
+    border-radius: 15px;
+    min-height: 15rem;
+    padding: 35px 15px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+
+
+.container .linkedAccounts {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    filter: drop-shadow(0 0 1.2px #ffffff) !important;
+}
+
+.container .linkedAccounts .linkedAccountsRedirect {
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.container .linkedAccounts .linkedAccountsRedirect.copied::before {
+    content: 'Copied';
+}
+
+.container .linkedAccounts .linkedAccountsRedirect::before {
+    content: attr(data-type);
+    opacity: 0;
+    color: white;
+    position: absolute;
+    font-size: 15px;
+    font-weight: 600;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1rem;
+    padding: 2px 16px;
+    z-index: 1;
+    filter: none;
+    box-shadow: none;
+    white-space: nowrap;
+    transition: opacity .3s;
+}
+
+.container .linkedAccounts .linkedAccountsRedirect:hover::before {
+    opacity: .9;
+}
+
+.container .linkedAccountsRedirect {
+    text-decoration: none;
+    color: white;
+}
+
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
