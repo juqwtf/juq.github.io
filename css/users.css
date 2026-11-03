@@ -13,13 +13,13 @@ body {
 	font-family: "Satoshi", sans-serif;
     user-drag: none;
 
-	-webkit-user-select: none; /* Disable text selection */
+	-webkit-user-select: none; 
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
 
-	-webkit-touch-callout: none; /* Disable right-click */
-	-webkit-user-drag: none; /* Disable dragging */
+	-webkit-touch-callout: none;
+	-webkit-user-drag: none;
 	-khtml-user-drag: none;
 	-moz-user-drag: none;
 	-o-user-drag: none;
@@ -112,4 +112,26 @@ img, .container .avatar, .container .banner {
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
+}
+
+a {
+    color: #ffffff; 
+    text-decoration: none; 
+    position: relative; 
+    display: inline-block;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; 
+    bottom: -2px; 
+    left: 0;
+    background-color: #ffffff; 
+    transition: width 0.3s ease-in-out; 
+}
+
+a:hover::after {
+    width: 100%;
 }
